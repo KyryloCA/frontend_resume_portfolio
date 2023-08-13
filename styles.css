@@ -1,0 +1,278 @@
+@font-face {
+  font-family: "Monaco";
+  font-style: normal;
+  font-weight: normal;
+  src: url(fonts/Monaco.woff) format("woff");
+}
+
+body {
+  background-color: gray;
+  font-family: monaco;
+  color: #333a30;
+}
+
+.container {
+  width: 1000px;
+
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url("icons/background.png");
+  background-size: cover; /* or contain, 100%, etc. */
+  background-attachment: scroll;
+}
+.spacer {
+  width: 30%;
+}
+.rest {
+  flex: 1;
+}
+header {
+  display: flex;
+
+  width: 100%;
+  opacity: 0.9;
+}
+main {
+  display: flex;
+  width: 100%;
+  height: 80%;
+}
+main .height-spacer {
+  height: 1050px;
+}
+.about {
+  padding: 10px 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  background-color: #8894b9;
+}
+.summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #e7eaf1;
+}
+.summary div {
+  margin: 0;
+  padding: 20px;
+  text-indent: 20px;
+}
+.summary .header {
+  margin: 0;
+  padding: 0px;
+  text-indent: 0px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+/* skills */
+.skills {
+  background-color: #cfd4e3;
+  fill: #333a30;
+  opacity: 0.9;
+}
+.skills p {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-left: 20px;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.skills ul {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 20px;
+}
+.cog li,
+.lang li {
+  display: flex;
+  line-height: 1.5em;
+  margin-left: 20px;
+  margin-bottom: 5px;
+  list-style: none;
+}
+.cog li:nth-child(n + 1):before {
+  content: "";
+  display: block;
+  width: 10px;
+  margin-right: 7px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("icons/cog.svg");
+  background-position: center center;
+}
+.lang li:nth-child(n + 1):before {
+  content: "";
+  display: block;
+  width: 10px;
+  margin-right: 7px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("icons/quill.svg");
+  background-position: center center;
+}
+.education li {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 5px;
+  line-height: 1.5em;
+  list-style: none;
+}
+
+.history {
+  background-color: #ffffff;
+  height: 2000px;
+}
+.history .header {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 0;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+.history h3 {
+  margin: 0;
+}
+.history h4 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.history .generaldesc {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.history .general-container {
+  margin: 0;
+  padding: 20px;
+  text-indent: 20px;
+}
+.history .timeframe {
+  margin: 0;
+  padding-top: 0;
+}
+.history article .project {
+  margin-left: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  justify-content: start;
+  align-items: center;
+  text-decoration: none;
+  color: #333a30;
+}
+
+.history article .project:hover::before {
+  opacity: 0.1;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #8894b9;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.history article .project::before {
+  opacity: 0.1;
+  content: "";
+  width: 100%;
+  height: 0;
+  position: absolute;
+  background-color: #8894b9;
+  transition: height 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  top: 0;
+  left: 0;
+}
+
+.history article .projectname {
+  align-self: baseline;
+  text-transform: uppercase;
+  font-weight: 400;
+  width: 140px;
+}
+.description {
+  text-indent: 0;
+  flex: 1;
+}
+.description p {
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 0;
+}
+.description span {
+  margin: 0;
+  padding: 0;
+}
+.description ul {
+  list-style-type: circle;
+  margin: 0;
+  padding-left: 20px;
+  text-indent: 5px;
+}
+.description .role,
+.description .desc,
+.description .tasks {
+  font-style: italic;
+  margin-right: 10px;
+}
+.username {
+  font-size: 35px;
+}
+.contacts {
+  padding-left: 5px;
+  margin-bottom: 0;
+}
+.contacts li {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+.contacts li a {
+  padding-left: 7px;
+  text-decoration: none;
+  color: inherit;
+}
+.contacts li svg {
+  fill: #333a30;
+}
+.socials {
+  display: flex;
+  margin: 10px 0px;
+  padding: 0;
+}
+.socials li {
+  margin: 0;
+  margin-right: 10px;
+  padding: 0;
+  list-style: none;
+  scale: 1;
+  transition: scale 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.socials li:hover {
+   scale: 1.03;
+  }
+.socials a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #ffffff;
+  opacity: 1;
+  z-index: 2;
+}
+.socials img {
+  display: block;
+  width: 25px;
+}
